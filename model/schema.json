@@ -1,0 +1,58 @@
+{
+  "dataset": "UCI Dry Bean Dataset",
+  "feature_columns": [
+    "Area",
+    "Perimeter",
+    "MajorAxisLength",
+    "MinorAxisLength",
+    "AspectRation",
+    "Eccentricity",
+    "ConvexArea",
+    "EquivDiameter",
+    "Extent",
+    "Solidity",
+    "roundness",
+    "Compactness",
+    "ShapeFactor1",
+    "ShapeFactor2",
+    "ShapeFactor3",
+    "ShapeFactor4"
+  ],
+  "target_column": "Class",
+  "label_encoder": "label_encoder.joblib",
+  "model_files": {
+    "Logistic Regression": "logistic_regression.joblib",
+    "Decision Tree": "decision_tree.joblib",
+    "KNN": "knn.joblib",
+    "Naive Bayes": "naive_bayes.joblib",
+    "Support Vector Machine": "svm.joblib"
+  },
+  "model_order": [
+    "Logistic Regression",
+    "Decision Tree",
+    "KNN",
+    "Naive Bayes",
+    "Support Vector Machine"
+  ],
+  "split": {
+    "test_size": 0.2,
+    "random_state": 2026,
+    "stratify": true
+  },
+  "metric_average": {
+    "precision_recall_f1": "weighted",
+    "auc": "weighted one-vs-rest"
+  },
+  "class_names": [
+    "BARBUNYA",
+    "BOMBAY",
+    "CALI",
+    "DERMASON",
+    "HOROZ",
+    "SEKER",
+    "SIRA"
+  ],
+  "versions": {
+    "scikit-learn": "1.9.1"
+  }
+}

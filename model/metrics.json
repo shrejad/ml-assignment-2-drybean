@@ -1,0 +1,356 @@
+{
+  "n_rows": 13611,
+  "n_features": 16,
+  "n_train": 10888,
+  "n_test": 2723,
+  "class_counts": {
+    "DERMASON": 3546,
+    "SIRA": 2636,
+    "SEKER": 2027,
+    "HOROZ": 1928,
+    "CALI": 1630,
+    "BARBUNYA": 1322,
+    "BOMBAY": 522
+  },
+  "baseline_accuracy": 0.26037458685273596,
+  "baseline_class": "DERMASON",
+  "correlations_above_0_90": [
+    {
+      "left": "Area",
+      "right": "ConvexArea",
+      "abs_corr": 0.9999392261797566
+    },
+    {
+      "left": "Compactness",
+      "right": "ShapeFactor3",
+      "abs_corr": 0.9986858130284293
+    },
+    {
+      "left": "Perimeter",
+      "right": "EquivDiameter",
+      "abs_corr": 0.9913804295980644
+    },
+    {
+      "left": "AspectRation",
+      "right": "Compactness",
+      "abs_corr": 0.9876872990527669
+    },
+    {
+      "left": "ConvexArea",
+      "right": "EquivDiameter",
+      "abs_corr": 0.9852262521812034
+    },
+    {
+      "left": "Area",
+      "right": "EquivDiameter",
+      "abs_corr": 0.9849675237714004
+    },
+    {
+      "left": "Eccentricity",
+      "right": "ShapeFactor3",
+      "abs_corr": 0.981057697275398
+    },
+    {
+      "left": "AspectRation",
+      "right": "ShapeFactor3",
+      "abs_corr": 0.9785922752809352
+    },
+    {
+      "left": "Perimeter",
+      "right": "MajorAxisLength",
+      "abs_corr": 0.9773377498852226
+    },
+    {
+      "left": "Eccentricity",
+      "right": "Compactness",
+      "abs_corr": 0.970313021625403
+    },
+    {
+      "left": "Perimeter",
+      "right": "ConvexArea",
+      "abs_corr": 0.9676892116996265
+    },
+    {
+      "left": "Area",
+      "right": "Perimeter",
+      "abs_corr": 0.9667221821788794
+    },
+    {
+      "left": "MajorAxisLength",
+      "right": "EquivDiameter",
+      "abs_corr": 0.9617333598397034
+    },
+    {
+      "left": "Area",
+      "right": "MinorAxisLength",
+      "abs_corr": 0.9516015990191635
+    },
+    {
+      "left": "MinorAxisLength",
+      "right": "ConvexArea",
+      "abs_corr": 0.951339328669715
+    },
+    {
+      "left": "MinorAxisLength",
+      "right": "EquivDiameter",
+      "abs_corr": 0.948538893918543
+    },
+    {
+      "left": "MinorAxisLength",
+      "right": "ShapeFactor1",
+      "abs_corr": 0.9472041671038306
+    },
+    {
+      "left": "MajorAxisLength",
+      "right": "ConvexArea",
+      "abs_corr": 0.9326070138970999
+    },
+    {
+      "left": "Area",
+      "right": "MajorAxisLength",
+      "abs_corr": 0.9318335947128645
+    },
+    {
+      "left": "AspectRation",
+      "right": "Eccentricity",
+      "abs_corr": 0.9242925542796033
+    },
+    {
+      "left": "Perimeter",
+      "right": "MinorAxisLength",
+      "abs_corr": 0.9131785552664614
+    }
+  ],
+  "models": [
+    {
+      "model": "Logistic Regression",
+      "file": "logistic_regression.joblib",
+      "fit_seconds": 0.35,
+      "train": {
+        "Accuracy": 0.9247795738427627,
+        "AUC": 0.9935419851124515,
+        "Precision": 0.9252862926128069,
+        "Recall": 0.9247795738427627,
+        "F1": 0.9249424620312354,
+        "MCC": 0.9090604012873433
+      },
+      "test": {
+        "Accuracy": 0.9250826294528094,
+        "AUC": 0.9936682439487938,
+        "Precision": 0.9251490566987675,
+        "Recall": 0.9250826294528094,
+        "F1": 0.9250829146685442,
+        "MCC": 0.9094623754363815
+      },
+      "confusions": [
+        [
+          "DERMASON",
+          "SIRA",
+          46
+        ],
+        [
+          "SIRA",
+          "DERMASON",
+          46
+        ],
+        [
+          "DERMASON",
+          "SEKER",
+          14
+        ]
+      ],
+      "extra": {}
+    },
+    {
+      "model": "Decision Tree",
+      "file": "decision_tree.joblib",
+      "fit_seconds": 0.41,
+      "train": {
+        "Accuracy": 1.0,
+        "AUC": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "MCC": 1.0
+      },
+      "test": {
+        "Accuracy": 0.8898273962541314,
+        "AUC": 0.9321912010450054,
+        "Precision": 0.8902048562802902,
+        "Recall": 0.8898273962541314,
+        "F1": 0.8899107044480865,
+        "MCC": 0.8669056982261553
+      },
+      "confusions": [
+        [
+          "DERMASON",
+          "SIRA",
+          68
+        ],
+        [
+          "SIRA",
+          "DERMASON",
+          59
+        ],
+        [
+          "CALI",
+          "BARBUNYA",
+          20
+        ]
+      ],
+      "extra": {
+        "top_features": [
+          [
+            "MajorAxisLength",
+            0.1813277148676108
+          ],
+          [
+            "ShapeFactor1",
+            0.174234423824054
+          ],
+          [
+            "Perimeter",
+            0.16176440972342754
+          ],
+          [
+            "Compactness",
+            0.1569213689132237
+          ],
+          [
+            "ShapeFactor3",
+            0.07970363222122574
+          ]
+        ],
+        "depth": 28,
+        "leaves": 724
+      }
+    },
+    {
+      "model": "KNN",
+      "file": "knn.joblib",
+      "fit_seconds": 0.01,
+      "train": {
+        "Accuracy": 0.9435157972079353,
+        "AUC": 0.9972883071765403,
+        "Precision": 0.9437054021795815,
+        "Recall": 0.9435157972079353,
+        "F1": 0.9435330530732619,
+        "MCC": 0.9316854289067256
+      },
+      "test": {
+        "Accuracy": 0.9210429673154609,
+        "AUC": 0.9826957403690361,
+        "Precision": 0.921104740416743,
+        "Recall": 0.9210429673154609,
+        "F1": 0.9210555927961604,
+        "MCC": 0.9045686655300273
+      },
+      "confusions": [
+        [
+          "DERMASON",
+          "SIRA",
+          56
+        ],
+        [
+          "SIRA",
+          "DERMASON",
+          55
+        ],
+        [
+          "DERMASON",
+          "SEKER",
+          14
+        ]
+      ],
+      "extra": {}
+    },
+    {
+      "model": "Naive Bayes",
+      "file": "naive_bayes.joblib",
+      "fit_seconds": 0.02,
+      "train": {
+        "Accuracy": 0.8951138868479059,
+        "AUC": 0.9900616266479958,
+        "Precision": 0.896357855012335,
+        "Recall": 0.8951138868479059,
+        "F1": 0.8951887224248773,
+        "MCC": 0.8735719671500232
+      },
+      "test": {
+        "Accuracy": 0.9008446566287184,
+        "AUC": 0.9906989055547302,
+        "Precision": 0.9014738646865795,
+        "Recall": 0.9008446566287184,
+        "F1": 0.9007702582124854,
+        "MCC": 0.8805143327098967
+      },
+      "confusions": [
+        [
+          "DERMASON",
+          "SIRA",
+          67
+        ],
+        [
+          "SIRA",
+          "DERMASON",
+          40
+        ],
+        [
+          "BARBUNYA",
+          "CALI",
+          29
+        ]
+      ],
+      "extra": {}
+    },
+    {
+      "model": "Support Vector Machine",
+      "file": "svm.joblib",
+      "fit_seconds": 4.1,
+      "train": {
+        "Accuracy": 0.932494489346069,
+        "AUC": 0.9945347262060756,
+        "Precision": 0.9326785934205963,
+        "Recall": 0.932494489346069,
+        "F1": 0.9325158365937682,
+        "MCC": 0.918347635072823
+      },
+      "test": {
+        "Accuracy": 0.9320602276900477,
+        "AUC": 0.9942121835482634,
+        "Precision": 0.9323786895358416,
+        "Recall": 0.9320602276900477,
+        "F1": 0.9321669626926432,
+        "MCC": 0.9178521965323699
+      },
+      "confusions": [
+        [
+          "SIRA",
+          "DERMASON",
+          45
+        ],
+        [
+          "DERMASON",
+          "SIRA",
+          43
+        ],
+        [
+          "DERMASON",
+          "SEKER",
+          12
+        ]
+      ],
+      "extra": {
+        "support_vectors": 2314,
+        "train_rows": 10888
+      }
+    }
+  ],
+  "winner_rule": "Highest test weighted F1, then MCC, then AUC, then accuracy.",
+  "winner": "Support Vector Machine",
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.1"
+  }
+}
