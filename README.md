@@ -34,13 +34,9 @@ The split is stratified 80/20 with `random_state=2026`: **10,888** training rows
 
 ## c. Github Repository Link
 
-Replace this before submission:
-
 **https://github.com/shrejad/ml-assignment-2-drybean**
 
-Live app, replace this too:
-
-**https://github.com/shrejad/ml-assignment-2-drybean**
+**https://ml-assignment-2-drybean-hsq5qx4dwm9cbbdewzkebt.streamlit.app/**
 
 The repository contains `app.py`, `train_models.py`, `evaluate.py`, `inference.py`, `requirements.txt`, `runtime.txt`, `README.md`, `test_data.csv`, `data/dry_bean.csv`, `lab_execution.ipynb`, and `model/` (five pipelines plus `label_encoder.joblib`).
 
